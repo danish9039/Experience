@@ -29,8 +29,9 @@ More information on the projects can be found on the [JaegerTracing Website
 
 ### [Jaeger](https://github.com/jaegertracing/jaeger)
 
-View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/search?q=is%3Apr+author%3Adanish9039+repo%3Ajaegertracing%2Fjaeger+repo%3Ajaegertracing%2Fjaeger-idl+repo%3Aopen-telemetry%2Fopentelemetry-collector+repo%3Ajaegertracing%2Fdocumentation&type=pullrequests)
+View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/search?q=is%3Apr+is%3Amerged+author%3Adanish9039+repo%3Ajaegertracing%2Fjaeger+repo%3Ajaegertracing%2Fjaeger-idl+repo%3Aopen-telemetry%2Fopentelemetry-collector+repo%3Ajaegertracing%2Fdocumentation&type=pullrequests)
 
+View all merged pull requests across all repositories: [VIEW ALL MERGED PRS](https://github.com/search?q=is%3Apr+author%3Adanish9039+is%3Amerged&type=pullrequests)
 
 | Date Created | Title | Pull Request Link |
 | ------------ | ----- | ----------------- |
