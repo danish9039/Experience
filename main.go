@@ -17,6 +17,7 @@ const (
 	repo           = "jaeger"
 	repoIDL        = "jaeger-idl"
 	repoOTel       = "opentelemetry-collector"
+	repoDocs       = "documentation"
 	username       = "danish9039"
 	readmeDataPath = "./Jaeger/readmeData.go"
 	mdFileName     = "./Jaeger/README.md"
@@ -74,9 +75,16 @@ func main() {
 		return
 	}
 
+	prsDocs, err := fetchPRs(client, ctx, owner, repoDocs)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	// Combine PRs from all repositories
 	allPRs := append(prsJaeger, prsIDL...)
 	allPRs = append(allPRs, prsOTel...)
+	allPRs = append(allPRs, prsDocs...)
 
 	filteredPRs := make([]*github.PullRequest, 0)
 	for _, pull := range allPRs {

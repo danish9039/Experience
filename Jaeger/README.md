@@ -29,7 +29,7 @@ More information on the projects can be found on the [JaegerTracing Website
 
 ### [Jaeger](https://github.com/jaegertracing/jaeger)
 
-View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/search?q=is%3Apr+author%3Adanish9039+repo%3Ajaegertracing%2Fjaeger+repo%3Ajaegertracing%2Fjaeger-idl+repo%3Aopen-telemetry%2Fopentelemetry-collector&type=pullrequests)
+View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/search?q=is%3Apr+author%3Adanish9039+repo%3Ajaegertracing%2Fjaeger+repo%3Ajaegertracing%2Fjaeger-idl+repo%3Aopen-telemetry%2Fopentelemetry-collector+repo%3Ajaegertracing%2Fdocumentation&type=pullrequests)
 
 
 | Date Created | Title | Pull Request Link |
@@ -57,3 +57,5 @@ View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://gith
 | 2025-01-20 | Copy model/time.go and model/keyvalue.go to jaeger-idl/model/v1 | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/122) |
 | 2025-01-20 | Reproduce linting checks from the main repo | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/121) |
 | 2025-01-04 | Feature command | [PR link](https://github.com/open-telemetry/opentelemetry-collector/pull/12014) |
+| 2024-06-02 | Typo in valuen and trft | [PR link](https://github.com/jaegertracing/documentation/pull/707) |
+| 2024-05-26 | Fix typos in behaviour, ingestor | [PR link](https://github.com/jaegertracing/documentation/pull/706) |
