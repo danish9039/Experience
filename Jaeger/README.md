@@ -29,7 +29,7 @@ More information on the projects can be found on the [JaegerTracing Website
 
 ### [Jaeger](https://github.com/jaegertracing/jaeger)
 
-View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/jaegertracing/jaeger/pulls?q=is%3Apr+author%3Adanish9039+is%3Aclosed)
+View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/search?q=is%3Apr+author%3Adanish9039+repo%3Ajaegertracing%2Fjaeger+repo%3Ajaegertracing%2Fjaeger-idl+repo%3Aopen-telemetry%2Fopentelemetry-collector&type=pullrequests)
 
 
 | Date Created | Title | Pull Request Link |

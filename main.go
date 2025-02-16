@@ -16,6 +16,7 @@ const (
 	owner          = "jaegertracing"
 	repo           = "jaeger"
 	repoIDL        = "jaeger-idl"
+	repoOTel       = "opentelemetry-collector"
 	username       = "danish9039"
 	readmeDataPath = "./Jaeger/readmeData.go"
 	mdFileName     = "./Jaeger/README.md"
@@ -54,7 +55,7 @@ func main() {
 
 	client := github.NewClient(tc)
 
-	// Fetch PRs from both repositories
+	// Fetch PRs from all three repositories
 	prsJaeger, err := fetchPRs(client, ctx, owner, repo)
 	if err != nil {
 		fmt.Println(err)
@@ -67,8 +68,15 @@ func main() {
 		return
 	}
 
-	// Combine PRs from both repositories
+	prsOTel, err := fetchPRs(client, ctx, "open-telemetry", repoOTel)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Combine PRs from all repositories
 	allPRs := append(prsJaeger, prsIDL...)
+	allPRs = append(allPRs, prsOTel...)
 
 	filteredPRs := make([]*github.PullRequest, 0)
 	for _, pull := range allPRs {
