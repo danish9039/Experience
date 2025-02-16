@@ -56,3 +56,4 @@ View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://gith
 | 2025-01-21 | copy `sort.go`, `span.go`, `spanref.go`, `trace.go`, `time.go` | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/124) |
 | 2025-01-20 | Copy model/time.go and model/keyvalue.go to jaeger-idl/model/v1 | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/122) |
 | 2025-01-20 | Reproduce linting checks from the main repo | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/121) |
+| 2025-01-04 | Feature command | [PR link](https://github.com/open-telemetry/opentelemetry-collector/pull/12014) |
