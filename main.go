@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/akagami-harsh/Experience/Jaeger"
+	"github.com/danish9039/Experience/Jaeger"
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
 )
@@ -15,7 +15,7 @@ import (
 const (
 	owner          = "jaegertracing"
 	repo           = "jaeger"
-	username       = "akagami-harsh"
+	username       = "danish9039"
 	readmeDataPath = "./Jaeger/readmeData.go"
 	mdFileName     = "./Jaeger/README.md"
 )

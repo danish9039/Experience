@@ -3,15 +3,17 @@ package Jaeger
 const Data = `
 ## Little about me
 
-- Name: Harshvir Potpose
-- Email: <hpotpose62@gmail.com>
-- GitHub Username: [akagami-harsh
-](https://github.com/akagami-harsh)
+- Name: Danish Siddiqui
+- Email: <danishsiddiqui040@gmail.com>
+- GitHub Username: [danish9039
+](https://github.com/danish9039)
 
 ## About the project
 
 Jaeger is an open-source tool that monitors and troubleshoots distributed systems based on microservices architecture. It was built by Uber and open-sourced in 2015.
-
+readmeDataPath = "./Jaeger/readmeData.go"
+	mdFileName     = "./Jaeger/README.md"
+)
 More information on the projects can be found on the [JaegerTracing Website
 ](https://www.jaegertracing.io/).
 
