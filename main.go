@@ -15,10 +15,29 @@ import (
 const (
 	owner          = "jaegertracing"
 	repo           = "jaeger"
+	repoIDL        = "jaeger-idl"
 	username       = "danish9039"
 	readmeDataPath = "./Jaeger/readmeData.go"
 	mdFileName     = "./Jaeger/README.md"
 )
+
+func fetchPRs(client *github.Client, ctx context.Context, owner, repo string) ([]*github.PullRequest, error) {
+	prs := make([]*github.PullRequest, 0)
+	for i := 1; i <= 30; i++ {
+		opts := &github.PullRequestListOptions{
+			State:       "closed",
+			Head:        username,
+			ListOptions: github.ListOptions{PerPage: 100, Page: i},
+		}
+		pr, _, err := client.PullRequests.List(ctx, owner, repo, opts)
+		if err != nil {
+			return nil, fmt.Errorf("error fetching pull requests: %v", err)
+		}
+		prs = append(prs, pr...)
+		fmt.Println("Fetching PRs from", repo, "Page:", i)
+	}
+	return prs, nil
+}
 
 func main() {
 	ctx := context.Background()
@@ -35,24 +54,24 @@ func main() {
 
 	client := github.NewClient(tc)
 
-	prs := make([]*github.PullRequest, 0)
-	for i := 1; i <= 30; i++ {
-		opts := &github.PullRequestListOptions{
-			State:       "closed",
-			Head:        username,
-			ListOptions: github.ListOptions{PerPage: 100, Page: i},
-		}
-		pr, _, err := client.PullRequests.List(ctx, owner, repo, opts)
-		if err != nil {
-			fmt.Printf("Error fetching pull requests: %v\n", err)
-			return
-		}
-		prs = append(prs, pr...)
-		fmt.Println("Page:", i)
+	// Fetch PRs from both repositories
+	prsJaeger, err := fetchPRs(client, ctx, owner, repo)
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
 
+	prsIDL, err := fetchPRs(client, ctx, owner, repoIDL)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// Combine PRs from both repositories
+	allPRs := append(prsJaeger, prsIDL...)
+
 	filteredPRs := make([]*github.PullRequest, 0)
-	for _, pull := range prs {
+	for _, pull := range allPRs {
 		if *pull.User.Login == username {
 			filteredPRs = append(filteredPRs, pull)
 		}
@@ -72,7 +91,7 @@ func main() {
 		sb.WriteString(fmt.Sprintf("| %s | %s | [PR link](%s) |\n", date, title, url))
 	}
 
-	err := os.WriteFile(mdFileName, []byte(sb.String()), 0644)
+	err = os.WriteFile(mdFileName, []byte(sb.String()), 0644)
 	if err != nil {
 		fmt.Printf("Error writing markdown file: %v\n", err)
 		return

@@ -29,7 +29,7 @@ More information on the projects can be found on the [JaegerTracing Website
 
 ### [Jaeger](https://github.com/jaegertracing/jaeger)
 
-View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/jaegertracing/jaeger/pulls?q=is%3Apr+author%3Adanish9039+is%3Aclosed)
+View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://github.com/jaegertracing/jaeger/pulls?q=is%3Apr+author%3Aakagami-harsh+is%3Aclosed)
 
 
 | Date Created | Title | Pull Request Link |
@@ -51,3 +51,8 @@ View all pull requests by me at a glance : [VIEW ALL PULL REQUESTS](https://gith
 | 2024-06-04 |  changed runner from ubuntu-latest to equinix-4cpu-16gb | [PR link](https://github.com/jaegertracing/jaeger/pull/5530) |
 | 2024-04-06 | code fixes to use new grpc api  | [PR link](https://github.com/jaegertracing/jaeger/pull/5335) |
 | 2024-03-27 | Add goleak check in pkg/cassandra/gocql/testutils | [PR link](https://github.com/jaegertracing/jaeger/pull/5304) |
+| 2025-01-31 | extracted url for scripts into variable | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/141) |
+| 2025-01-27 | add generated thrift file for `agent.thrift` and `jaeger.thrift` | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/130) |
+| 2025-01-21 | copy `sort.go`, `span.go`, `spanref.go`, `trace.go`, `time.go` | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/124) |
+| 2025-01-20 | Copy model/time.go and model/keyvalue.go to jaeger-idl/model/v1 | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/122) |
+| 2025-01-20 | Reproduce linting checks from the main repo | [PR link](https://github.com/jaegertracing/jaeger-idl/pull/121) |
